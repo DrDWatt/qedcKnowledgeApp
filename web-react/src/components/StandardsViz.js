@@ -27,9 +27,9 @@ export default function standardNodes() {
       dataFormatted.push(['Key', 'Title', 'Url', 'Child'])
       dataFormatted.push([node.title, null, null, 0])
     } else if (index < 50) {
-      dataFormatted.push([node.title, 'qedcDataTom', index, 0])
+      dataFormatted.push([node.title, 'qedcDataTom', index, index])
     } else {
-      dataFormatted.push([node.title, 'qedcDataTom', node.key, 0])
+      dataFormatted.push([node.title, 'qedcDataTom', node.key, index])
     }
     index = index + 1
   })
