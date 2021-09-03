@@ -1,0 +1,21 @@
+
+# These type definitions have been generated from your Neo4j database.
+
+# Here are some Neo4j specific scalars that you can use to map to native Neo4j types:
+scalar Point
+scalar Date
+scalar DateTime
+scalar Long
+
+# Edit these GraphQL type definitions below to change your GraphQL API
+# You can add custom logic defined with Cypher using the @cypher GraphQL schema directive
+# You can refer to the docs at https://grandstack.io
+type Node {
+   _id: Long!
+   key: String!
+   title: String!
+   url: String!
+   child: [Node] @relationship(type: "CHILD", direction: OUT)
+}
+
+
